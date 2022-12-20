@@ -1,5 +1,5 @@
 import "../styles/style.css";
-import "../styles/header.css";
+import "../styles/variables.css";
 import { rocks } from "../js/menu.js";
 
 const DOMSelectors = {
