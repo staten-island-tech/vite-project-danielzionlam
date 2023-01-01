@@ -1,6 +1,5 @@
 import "../styles/style.css";
-import "../styles/variables.css";
-import { rocks } from "../js/menu.js";
+import { animals } from "./menu";
 
 const DOMSelectors = {
   appSec: document.querySelector(".app"),
@@ -21,16 +20,16 @@ document.querySelector(".btn").addEventListener("click", function () {
 
 // Darren's flexbox thing
 
-function insertCard(rock) {
+function insertCard(animal) {
   document.querySelector(".app").insertAdjacentHTML(
     "afterbegin",
     `<div class="card">
-    <img class="card-pic" src="${rock.pic}">
+    <img class="card-pic" src="${animal.img}">
     <div class="card-text">
-      <h3 class="card-title">${rock.name}</h3>
-      <h4 class="card-title"> $${rock.cost}</h4>
+      <h3 class="card-title">${animal.name}</h3>
+      <h4 class="card-title"> $${animal.price}</h4>
       <h4 class="card-title"><i class="fab fa-ethereum"></i></h4>
-      <h4 class="caption">${rock.description}</h4>
+      <h4 class="caption">${animal.armedanddangerous}</h4>
     </div>
   </div>`
   );
@@ -38,31 +37,31 @@ function insertCard(rock) {
 
 // rocks.forEach(rock => console.log(rock.name));
 function displayAllCards() {
-  rocks.forEach((rock) => {
-    insertCard(rock);
+  animals.forEach((animal) => {
+    insertCard(animal);
   });
 }
 displayAllCards();
 
-function displayColdRocks() {
-  rocks
-    .filter((rock) => rock.section === "cool-rocks")
-    .forEach((rock) => {
-      insertCard(rock);
+function displaySusAnimals() {
+  animals
+    .filter((animal) => animal.sus === "yes")
+    .forEach((animal) => {
+      insertCard(animal);
     });
 }
-function displayDumbRocks() {
-  rocks
-    .filter((rock) => rock.section === "stoopid-rocks")
-    .forEach((rock) => {
-      insertCard(rock);
+function displayNotSusAnimals() {
+  animals
+    .filter((animal) => animal.sus === "no")
+    .forEach((animal) => {
+      insertCard(animal);
     });
 }
-function displayPoopRocks() {
-  rocks
-    .filter((rock) => rock.section === "heals-diarrhea")
-    .forEach((rock) => {
-      insertCard(rock);
+function displayArguablySusAnimals() {
+  animals
+    .filter((animal) => animal.sus === "argueable")
+    .forEach((animal) => {
+      insertCard(animal);
     });
 }
 
@@ -72,85 +71,53 @@ function displaySaleRocks() {
  })
  console.log(saleRocks);
  let x= 0; */
-  rocks
-    .map((rock) => ({
-      name: rock.name,
-      section: rock.section,
-      description: rock.description,
-      pic: rock.pic,
-      cost: (rock.cost / 2).toFixed(2),
+  animals
+    .map((animal) => ({
+      name: animal.name,
+      sus: animal.sus,
+      armedanddangerous: animal.armedanddangerous,
+      img: animal.img,
+      price: (animal.price / 1.5).toFixed(1.5),
     }))
-    .filter((rock) => rock.section === "stoopid-rocks")
-    .forEach((rock) => {
-      insertCard(rock);
-      console.log(rock);
+    .filter((animal) => animal.sus === "yes")
+    .forEach((animal) => {
+      insertCard(animal);
+      console.log(animal);
     });
 }
 
-function clickyCold() {
+function clickSus() {
   clearDOM();
-  displayColdRocks();
+  displaySusAnimals();
 }
 
-function clickyDumb() {
+function clickNyetSus() {
   clearDOM();
-  displayDumbRocks();
+  displayNotSusAnimals();
 }
 
-function clickyPoop() {
+function clickHmm() {
   clearDOM();
-  displayPoopRocks();
+  displayArguablySusAnimals();
 }
 
-function clickyAll() {
+function clickAnimals() {
   clearDOM();
   displayAllCards();
 }
 
-function clickySale() {
+function clickSale() {
   clearDOM();
   displaySaleRocks();
 }
 
-const coolRocksButton = document.getElementById("cold-rocks-btn");
-coolRocksButton.addEventListener("click", clickyCold);
-const stoopidRocksButton = document.getElementById("dumb-rocks-btn");
-stoopidRocksButton.addEventListener("click", clickyDumb);
-const poopyRocksButton = document.getElementById("poop-rocks-btn");
-poopyRocksButton.addEventListener("click", clickyPoop);
-const allRocksButt = document.getElementById("all-rocks-btn");
-allRocksButt.addEventListener("click", clickyAll);
-const saleButton = document.getElementById("sale-rocks-btn");
-saleButton.addEventListener("click", clickySale);
-
-var sound = new Audio("fart.mp3");
-
-poopyRocksButton.addEventListener("click", () => {
-  sound.currentTime = 0;
-  sound.play();
-});
-
-// .coolrocks.form.addEventListener("click", function(){
-// rocks.forEach((rock) => console.log(rock.section)); */
-// const DOMSelectors={
-//   coolrocks: document.getElementById("coldrocks"),
-//   stoopidrocks:document.getElementById("dumrocks"),
-//   healsdiarrhea:document.getElementById("poop"),
-
-// }
-// console.log(DOMSelectors);
-// DOMSelectors.coolrocks.addEventListener("click",()=>{
-
-//     .remove(rocks.section==="heals-diarrhea");
-//   console.log("clicked");
-
-// const cool = rocks.filter((rock) => rock.section == "cool-rocks");
-// console.log(cool);
-
-// const coolRocks = document.getElementById("coldrocks");
-// console.log(coolRocks);
-// coolRocks.forEach((coolrock)=>{
-//   coolrock.addEventListener("click", ()=>{
-//     console.log("clicked");
-//   })
-// });
+const susButton = document.getElementById("sus-btn");
+susButton.addEventListener("click", clickSus);
+const nyetSusButton = document.getElementById("nyetsus-btn");
+nyetSusButton.addEventListener("click", clickNyetSus);
+const hmmButton = document.getElementById("hmm-btn");
+hmmButton.addEventListener("click", clickHmm);
+const allAnimalsButton = document.getElementById("animals-btn");
+allAnimalsButton.addEventListener("click", clickAnimals);
+const saleButton = document.getElementById("sale-btn");
+saleButton.addEventListener("click", clickSale);

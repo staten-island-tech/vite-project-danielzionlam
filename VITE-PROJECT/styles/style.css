@@ -1,19 +1,84 @@
-@import url(variables.css);
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-  height: 100vh;
-  width: 100vw;
+@import url("variables.css");
+.app {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
 }
-.animation {
-  background-color: blue;
-  height: 90vh;
+.card {
+  width: 36rem;
+  margin: 5rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background-color: var(--tertiary);
+  /* REPLACE BACKGROUND COLOR WITH COLOR SCHEME 
+   i still don't know whether to use % or rem cause if i use % just look what happens when you resize the window
+*/
 }
-.header-animation {
-  font-size: 60px;
+.card-pic {
+  width: 100%;
+  height: 33rem;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 0.75rem;
+}
+.card-title {
   text-align: center;
+  font-weight: 900;
+  padding-bottom: 0.75rem;
+}
+.caption {
+  text-align: center;
+  font-weight: 300;
+}
+.price {
+  color: #003333;
+  font-weight: 150;
+  font-size: var(--h4);
+}
+#eth {
+  padding-right: 0.75rem;
+}
+.card-text {
+  color: var(--black);
+  padding: 1rem;
+}
+body {
+  background-color: var(--secondary);
+}
+.buttons {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-evenly;
+}
+
+@media screen and (max-width: 1024px) {
+  ul.menu {
+    display: none !important;
+  }
+}
+ul.menu {
+  padding-top: 1.3rem;
+  padding-bottom: 1rem;
+}
+.main-title {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: var(--five);
+  padding: 3rem;
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+  background-image: url("dwayne-boom.gif");
+  background-size: 45rem 30rem;
+}
+.menu-logo-name {
+  color: white;
+}
+#explosion {
+  width: 40rem;
+  height: 9rem;
+}
+.menu-logo img {
+  width: 9rem;
+  height: 9rem;
 }
