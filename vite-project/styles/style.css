@@ -10,9 +10,6 @@
   padding: 1rem;
   border-radius: 1.5rem;
   background-color: var(--tertiary);
-  /* REPLACE BACKGROUND COLOR WITH COLOR SCHEME 
-   i still don't know whether to use % or rem cause if i use % just look what happens when you resize the window
-*/
 }
 .card-pic {
   width: 100%;
@@ -31,7 +28,7 @@
   font-weight: 300;
 }
 .price {
-  color: #003333;
+  color: #000000;
   font-weight: 150;
   font-size: var(--h4);
 }
@@ -68,17 +65,9 @@ ul.menu {
   padding: 3rem;
   margin-top: 8rem;
   margin-bottom: 8rem;
-  background-image: url("dwayne-boom.gif");
   background-size: 45rem 30rem;
 }
-.menu-logo-name {
-  color: white;
-}
-#explosion {
-  width: 40rem;
-  height: 9rem;
-}
-.menu-logo img {
-  width: 9rem;
-  height: 9rem;
+.btn {
+  display: flex;
+  justify-content: center;
 }

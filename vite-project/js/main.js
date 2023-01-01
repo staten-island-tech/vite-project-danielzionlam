@@ -1,5 +1,5 @@
 import "../styles/style.css";
-import { animals } from "./menu";
+import { animals } from "./menu.js";
 
 const DOMSelectors = {
   appSec: document.querySelector(".app"),
@@ -28,8 +28,7 @@ function insertCard(animal) {
     <div class="card-text">
       <h3 class="card-title">${animal.name}</h3>
       <h4 class="card-title"> $${animal.price}</h4>
-      <h4 class="card-title"><i class="fab fa-ethereum"></i></h4>
-      <h4 class="caption">${animal.armedanddangerous}</h4>
+      <h4 class="caption">herpes: ${animal.herpes}</h4>
     </div>
   </div>`
   );
@@ -75,9 +74,9 @@ function displaySaleRocks() {
     .map((animal) => ({
       name: animal.name,
       sus: animal.sus,
-      armedanddangerous: animal.armedanddangerous,
+      herpes: animal.herpes,
       img: animal.img,
-      price: (animal.price / 1.5).toFixed(1.5),
+      price: (animal.price / 4).toFixed(4),
     }))
     .filter((animal) => animal.sus === "yes")
     .forEach((animal) => {

@@ -12,19 +12,19 @@ body {
   font-family: "Bitter", serif;
 }
 :root {
-  --almond: #f1dac4;
-  --gray: #a69cac;
-  --navy: #474973;
-  --blue: #161b33;
-  --black: #0d0c1d;
-  --green: #1e3231;
-  --blackcoral: #485665;
-  --lilac: #d0a5c0;
-  --purple: #8e7c93;
-  --pink: #f6c0d0;
+  --ivory: #ffe7d0;
+  --grey: #aaaaaa;
+  --oxford: #18396b;
+  --rich: #0c1821;
+  --black: #000000;
+  --jet: #353238;
+  --red: #92140c;
+  --copper: #be7c4d;
+  --cedar: #be5a38;
+  --silver: #c1b4ae;
 
-  --primary: var(--almond);
-  --secondary: var(--gray);
+  --primary: var(--ivory);
+  --secondary: var(--grey);
 
   --h1: 7.594rem;
   --h2: 5.063rem;
@@ -34,18 +34,18 @@ body {
 }
 
 .cool {
-  --primary: var(--almond);
-  --secondary: var(--gray);
-  --tertiary: var(--navy);
-  --four: var(--blue);
+  --primary: var(--ivory);
+  --secondary: var(--grey);
+  --tertiary: var(--oxford);
+  --four: var(--rich);
   --five: var(--black);
 }
 .warm {
-  --secondary: var(--green);
-  --five: var(--blackcoral);
-  --tertiary: var(--purple);
-  --four: var(--lilac);
-  --primary: var(--pink);
+  --secondary: var(--jet);
+  --five: var(--red);
+  --tertiary: var(--copper);
+  --four: var(--cedar);
+  --primary: var(--silver);
 }
 
 h1 {
@@ -101,5 +101,5 @@ a {
 }
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 0.5rem rgba(16, 16, 16, 0.2);
 }
