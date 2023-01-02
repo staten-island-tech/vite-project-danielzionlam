@@ -71,3 +71,9 @@ ul.menu {
   display: flex;
   justify-content: center;
 }
+.btn:hover {
+  transform: scale(1.1);
+  outline: 0.5rem solid rgb(255, 255, 255);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}

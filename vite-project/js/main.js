@@ -18,8 +18,6 @@ document.querySelector(".btn").addEventListener("click", function () {
   }
 });
 
-// Darren's flexbox thing
-
 function insertCard(animal) {
   document.querySelector(".app").insertAdjacentHTML(
     "afterbegin",
@@ -34,7 +32,6 @@ function insertCard(animal) {
   );
 }
 
-// rocks.forEach(rock => console.log(rock.name));
 function displayAllCards() {
   animals.forEach((animal) => {
     insertCard(animal);
@@ -63,13 +60,28 @@ function displayArguablySusAnimals() {
       insertCard(animal);
     });
 }
-
-function displaySaleRocks() {
-  /* const saleRocks= rocks.map( function(rock){
-    return rock.cost/2;
- })
- console.log(saleRocks);
- let x= 0; */
+function displayHerpes() {
+  animals
+    .filter((animal) => animal.herpes === true)
+    .forEach((animal) => {
+      insertCard(animal);
+    });
+}
+function displaySafe() {
+  animals
+    .filter((animal) => animal.herpes === false)
+    .forEach((animal) => {
+      insertCard(animal);
+    });
+}
+function displayLightskin() {
+  animals
+    .filter((animal) => animal.lightskin === true)
+    .forEach((animal) => {
+      insertCard(animal);
+    });
+}
+function displaySale() {
   animals
     .map((animal) => ({
       name: animal.name,
@@ -107,7 +119,21 @@ function clickAnimals() {
 
 function clickSale() {
   clearDOM();
-  displaySaleRocks();
+  displaySale();
+}
+
+function clickHerpes() {
+  clearDOM();
+  displayHerpes();
+}
+
+function clickSafe() {
+  clearDOM();
+  displaySafe();
+}
+function clickLightskin() {
+  clearDOM();
+  displayLightskin();
 }
 
 const susButton = document.getElementById("sus-btn");
@@ -120,3 +146,9 @@ const allAnimalsButton = document.getElementById("animals-btn");
 allAnimalsButton.addEventListener("click", clickAnimals);
 const saleButton = document.getElementById("sale-btn");
 saleButton.addEventListener("click", clickSale);
+const herpesButton = document.getElementById("herpes-btn");
+herpesButton.addEventListener("click", clickHerpes);
+const safeButton = document.getElementById("safe-btn");
+safeButton.addEventListener("click", clickSafe);
+const lightskinButton = document.getElementById("lightskin-btn");
+lightskinButton.addEventListener("click", clickLightskin);
