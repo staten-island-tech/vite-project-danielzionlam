@@ -136,19 +136,19 @@ function clickLightskin() {
   displayLightskin();
 }
 
-const susButton = document.getElementById("sus-btn");
+var susButton = document.getElementById("sus-btn");
 susButton.addEventListener("click", clickSus);
-const nyetSusButton = document.getElementById("nyetsus-btn");
+var nyetSusButton = document.getElementById("nyetsus-btn");
 nyetSusButton.addEventListener("click", clickNyetSus);
-const hmmButton = document.getElementById("hmm-btn");
+var hmmButton = document.getElementById("hmm-btn");
 hmmButton.addEventListener("click", clickHmm);
-const allAnimalsButton = document.getElementById("animals-btn");
+var allAnimalsButton = document.getElementById("animals-btn");
 allAnimalsButton.addEventListener("click", clickAnimals);
-const saleButton = document.getElementById("sale-btn");
+var saleButton = document.getElementById("sale-btn");
 saleButton.addEventListener("click", clickSale);
-const herpesButton = document.getElementById("herpes-btn");
+var herpesButton = document.getElementById("herpes-btn");
 herpesButton.addEventListener("click", clickHerpes);
-const safeButton = document.getElementById("safe-btn");
+var safeButton = document.getElementById("safe-btn");
 safeButton.addEventListener("click", clickSafe);
-const lightskinButton = document.getElementById("lightskin-btn");
+var lightskinButton = document.getElementById("lightskin-btn");
 lightskinButton.addEventListener("click", clickLightskin);

@@ -1,4 +1,4 @@
-const animals = [
+var animals = [
   {
     name: "Curious George",
     herpes: true,
