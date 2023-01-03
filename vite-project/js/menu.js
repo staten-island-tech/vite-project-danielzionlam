@@ -64,10 +64,10 @@ var animals = [
     lightskin: true,
   },
   {
-    name: "Permed Lightskin Dog",
+    name: "Half Lightskin Dog",
     herpes: true,
     price: 20,
-    img: "https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/d7f7e07fda173d194325ce5686c2598e~c5_720x720.jpeg?x-expires=1672736400&x-signature=qypJJQ0%2BA%2B2X850h%2FAFo6JGfYFo%3D",
+    img: "https://m.media-amazon.com/images/I/51RntoCHFYL.jpg",
     sus: "yes",
     lightskin: true,
   },
